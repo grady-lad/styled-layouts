@@ -1,11 +1,5 @@
 import Link from 'next/link';
-import {
-  Box,
-  Center,
-  Cover,
-  Sidebar as SidebarLayout,
-  Stack,
-} from '@styled-layouts';
+import { Box, Center, Sidebar as SidebarLayout, Stack } from '@styled-layouts';
 
 const SiteLayout = ({ children }) => (
   <SidebarLayout>
@@ -78,11 +72,9 @@ const SiteLayout = ({ children }) => (
         </nav>
       </Stack>
     </Box>
-    <main>
-      <Cover hasPadding space={2}>
-        {children}
-      </Cover>
-    </main>
+    <Box as="main" space={2}>
+      {children}
+    </Box>
   </SidebarLayout>
 );
 
